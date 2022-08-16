@@ -1,16 +1,17 @@
-import {
-	CssBaseline,
-	Typography,
-} from '@mui/material';
+import { 
+  BrowserRouter,
+  Routes,
+  Route, 
+} from "react-router-dom";
+import HomePage from "./screens/HomePage";
 
 function App() {
   return (
-	<div style={{ padding: 16, margin: 'auto', maxWidth: 700 }}>
-	  <CssBaseline />
-		<Typography variant="h4" align="center" component="h1" gutterBottom>
-			Score Tracker
-		</Typography>
-	</div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
