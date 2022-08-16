@@ -1,11 +1,10 @@
 import React from 'react'
 import {
   Box,
-  Button,
   Container,
   Stack,
-  TextField,
 } from '@mui/material';
+import TextInputWithButton from './components/TextInputWithButton';
 
 const HomePage = () => {
   return (
@@ -24,16 +23,9 @@ const HomePage = () => {
             spacing={2}
             justifyContent="center"
           >
-            <Stack
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <TextField id="outlined-basic" label="Team Information" variant="outlined" sx={{ width: "80%" }}/>
-              <Button variant="contained" component="label">
-                Submit
-              </Button>
-            </Stack>
+            <TextInputWithButton 
+              label="Team Information"
+            />
           </Stack>
         </Container>
       </Box>
