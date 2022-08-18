@@ -1,16 +1,14 @@
 import React from 'react'
 import {
   Box,
-  Button,
   Card,
-  CardActions,
-  CardContent,
   Container,
   Grid,
   Stack,
-  Typography,
 } from '@mui/material';
+import ScoreList from './components/ScoreList';
 import TextInputWithButton from './components/TextInputWithButton';
+
 
 const HomePage = () => {
   return (
@@ -24,27 +22,9 @@ const HomePage = () => {
       >
         <Container maxWidth="lg">
           <Grid container display="flex" justifyContent="center" alignItems="center">
-            <Grid item md={12} lg={8} display="flex" justifyContent="center" alignItems="center">
+            <Grid item xs={12} sm={12} md={12} lg={8} display="flex" justifyContent="center" alignItems="center">
               <Card sx={{ minWidth: "80%" }}>
-                <CardContent>
-                  <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    Word of the Day
-                  </Typography>
-                  <Typography variant="h5" component="div">
-                    benevelont
-                  </Typography>
-                  <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    adjective
-                  </Typography>
-                  <Typography variant="body2">
-                    well meaning and kindly.
-                    <br />
-                    {'"a benevolent smile"'}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small">Learn More</Button>
-                </CardActions>
+                <ScoreList />
               </Card>
             </Grid>
             <Grid container item md={12} lg={4} display="flex" justifyContent="center">
