@@ -1,7 +1,7 @@
 const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database(':memory:');
 
-async function query(sql, params) {
+async function query(sql, params=null) {
     db.serialize(() => {
         const sqlStatement = db.prepare(sql);
         

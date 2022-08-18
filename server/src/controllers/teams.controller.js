@@ -2,7 +2,7 @@ const teams = require('../services/teams.service');
 
 async function get(req, res, next) {
   try {
-      res.json(await teams.getMultiple(req.query.page));
+      res.json(await teams.get());
   } catch (err) {
       console.error(`Error while getting teams`, err.message);
       next(err);
@@ -27,18 +27,8 @@ async function update(req, res, next) {
   }
 }
 
-async function remove(req, res, next) {
-  try {
-    res.json(await teams.remove(req.params.id));
-  } catch (err) {
-    console.error(`Error while deleting teams`, err.message);
-    next(err);
-  }
-}
-
 module.exports = {
   get,
   create,
-  update,
-  remove
+  update
 };

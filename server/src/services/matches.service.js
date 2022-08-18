@@ -1,5 +1,14 @@
 const db = require('./db.service');
 
+async function get(){
+	const rows = await db.query(
+	  `SELECT *
+	  FROM matches`,
+	);
+  
+	return rows;
+}
+
 async function create(matches){
   const result = await db.query(
     `INSERT INTO matches 
@@ -45,6 +54,7 @@ async function update(id, matches){
 }
 
 module.exports = {
+  get,
   create,
   update
 }
