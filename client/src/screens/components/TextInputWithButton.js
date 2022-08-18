@@ -8,11 +8,12 @@ import {
 const TextInputWithButton = ({ label }) => {
   return (
     <Stack
-      direction="row"
+      direction="column"
       spacing={2}
       justifyContent="center"
+      sx={{ pb: 2 }}
     >
-      <TextField id="outlined-basic" label={label} variant="outlined" sx={{ width: "80%" }}/>
+      <TextField id="outlined-basic" label={label} variant="outlined" sx={{ width: "100%" }} multiline />
       <Button variant="contained" component="label">
         Submit
       </Button>
